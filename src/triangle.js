@@ -5,5 +5,7 @@ export function Triangle(side1, side2, side3) {
 }
 
 Triangle.prototype.checkType = function() {
-  return "not a triangle";
+  if (this.side1 + this.side2 > this.side3 || this.side2 + this.side3 > this.side1 || this.side1 + this.side3 > this.side2) {
+    return "not a triangle";
+  } 
 };
