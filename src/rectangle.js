@@ -1,14 +1,12 @@
-export function Rectangle(side1, side2, side3, side4) {
-  this.side1 = side1;
-  this.side2 = side2;
-  this.side3 = side3;
-  this.side4 = side4;
+export function Rectangle(width, length) {
+  this.width = width;
+  this.length = length;
 }
 
 Rectangle.prototype.checkType = function() {
-    if ((this.side1 === this.side2) && (this.side2 === this.side3) && (this.side3 === this.side4) && (this.side4 === this.side1)) {
+    if ((this.width * 2) === (this.length * 2)) {
       return "this is a square";
-    } else if ((this.side1 === this.side3) && (this.side2 === this.side4)) {
+    } else if ((this.width * 2) !== (this.length * 2)) {
       return "this is a rectangle";
     }
 };
