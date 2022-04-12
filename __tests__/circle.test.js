@@ -16,4 +16,9 @@ describe ('Circle', () => {
     const mediumCircle = new Circle(6);
     expect(mediumCircle.sizeOf()).toEqual("medium");
   });
+
+  test("if radius input is greater than 10 it should return circle object with a size of large", () => {
+    const largeCircle = new Circle(11);
+    expect(largeCircle.sizeOf()).toEqual("large");
+  });
 });

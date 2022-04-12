@@ -7,5 +7,7 @@ Circle.prototype.sizeOf = function() {
     return "small";
   } else if ((this.radius > 5) && (this.radius <= 10)) {
     return "medium";
+  } else if (this.radius > 10) {
+    return "large";
   }
 } 
